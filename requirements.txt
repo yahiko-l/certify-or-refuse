@@ -1,0 +1,5 @@
+# Synthetic experiments (Claims 1–5), the certificate kernel, and the Path A
+# frontier regeneration. CPU only. Tested on Python 3.12.0.
+numpy==2.3.5
+scipy==1.16.3
+joblib==1.5.2

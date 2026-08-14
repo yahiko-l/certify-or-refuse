@@ -1,0 +1,182 @@
+{
+ "model": "<MODEL_DIR>/DeepSeek-V4-Flash",
+ "prompt_sha256": "04310a8da18b3798b957b1c9acc9580e84b17ff8c7074dfa0212baf08c548f3b",
+ "max_new_tokens": 64,
+ "ctx_clip": 6000,
+ "temperature": 0.0,
+ "target": "newsqa",
+ "counts": {
+  "squad_train": 86588,
+  "newsqa_train": 74160,
+  "squad_dev": 10507,
+  "newsqa_dev": 4212
+ },
+ "pools": {
+  "src_lock": {
+   "n": 8000,
+   "path": "<ARTIFACT_ROOT>/experiments/real/cache/src_lock.jsonl",
+   "sha256": "146d2bb3b87e799be2551352a29a965047ff824b633f14ef2039557da1532263",
+   "qids_sha256": "4029b277c80dea3b0c5bb1f52ad473e4df00d2e108035ebc530329268619ceab",
+   "score_summary": {
+    "mean": -0.039263358845004516,
+    "std": 0.05882261498081773,
+    "min": -0.78069768846035,
+    "max": -3.1788917406553687e-06
+   }
+  },
+  "src_wP": {
+   "n": 16000,
+   "path": "<ARTIFACT_ROOT>/experiments/real/cache/src_wP.jsonl",
+   "sha256": "07d64d1c779f88fc116dbce4941a8ffe4c87c45f50fa46cd690ab4a7d5a268c2",
+   "qids_sha256": "9110bb65603ba882d8d078d1eab777de7e823229412f1e85681ade511c06b93e",
+   "score_summary": {
+    "mean": -0.040240003580922036,
+    "std": 0.06137866633355519,
+    "min": -0.9480717778205872,
+    "max": -1.0967242701553913e-06
+   }
+  },
+  "src_r": {
+   "n": 16000,
+   "path": "<ARTIFACT_ROOT>/experiments/real/cache/src_r.jsonl",
+   "sha256": "f5dac919d738ce29001b37e057e0bed9695f5d472bf44eb851da0aaae82e9769",
+   "qids_sha256": "9505e0b391f3fc8141d7740d48f478c73285fe64826bf7b703bbbb2dee2aefeb",
+   "score_summary": {
+    "mean": -0.04088885220630283,
+    "std": 0.06222451452660182,
+    "min": -0.9313452243804932,
+    "max": -1.9371484540897654e-06
+   }
+  },
+  "src_unlabeled_ladder": {
+   "n": 20000,
+   "path": "<ARTIFACT_ROOT>/experiments/real/cache/src_unlabeled_ladder.jsonl",
+   "sha256": "56c50507e8f03c5e7584294e97df5a554b5d49534d7e52dc32ab80f91ab9f6ff",
+   "qids_sha256": "c54d6eb19d57dfac07762b1c52621ef466d236f3ed29fdb42b14e9a8dc6ecc5b",
+   "score_summary": {
+    "mean": -0.03980808131526421,
+    "std": 0.06059128598217375,
+    "min": -0.7574075311422348,
+    "max": -1.5735589911969327e-06
+   }
+  },
+  "tgt_unlabeled": {
+   "n": 40000,
+   "path": "<ARTIFACT_ROOT>/experiments/real/cache/tgt_unlabeled.jsonl",
+   "sha256": "2a9a9bcef95fea08a8129abf07a7209052a6e3c46d4881482fa62f8a6a1eb33b",
+   "qids_sha256": "d0d6d0c7881dc1255db2429b572d93389d60c04e5c63a63b544c803bbe5ae33a",
+   "score_summary": {
+    "mean": -0.06617034385996935,
+    "std": 0.0853775740656838,
+    "min": -1.2626265585422516,
+    "max": -2.3245741308149568e-06
+   }
+  },
+  "eval_target": {
+   "n": 4212,
+   "path": "<ARTIFACT_ROOT>/experiments/real/cache/eval_target.jsonl",
+   "sha256": "ed48883ff9209b127bba1329ce1df1978d1658484aa76c48b9d32f27890c1017",
+   "qids_sha256": "3de53f343f18dfcb6a7ba950b8009d7b95e681108b33f2251ef59ce0fc38a9a4",
+   "score_summary": {
+    "mean": -0.06435416247764628,
+    "std": 0.08780700112730289,
+    "min": -1.2705172300338745,
+    "max": -9.516664178477185e-06
+   }
+  },
+  "eval_source": {
+   "n": 10507,
+   "path": "<ARTIFACT_ROOT>/experiments/real/cache/eval_source.jsonl",
+   "sha256": "d48abfeb1e7b9377d13ec9a417e70fadc57a21a1a1e3ffa04edcdd6d594bba9b",
+   "qids_sha256": "de253ba97bcd0a03d719072ba36080a048e1df9e7512be411ad3d7dd6182e621",
+   "score_summary": {
+    "mean": -0.039968009833930576,
+    "std": 0.05941388015649394,
+    "min": -0.6234451333681742,
+    "max": -1.748400980735217e-06
+   }
+  }
+ },
+ "seed": 20260611,
+ "max_items": 0,
+ "tp": 4,
+ "dtype": "bfloat16",
+ "max_model_len": 8192,
+ "vllm_version": "0.22.1",
+ "model_snapshot": "<MODEL_DIR>/DeepSeek-V4-Flash | config:52b5a1aa87606cb5be4f3158d706594edb1c4ce97ce6b1cd6079f15df075d7f5 | index:7e975ba3bef8947a94e7da0abd60888375b232b4dfad883d59653e65c6ba522a",
+ "model_deviation": "R046-A2 (codex-ratified GO, thread 019eb76d): leg-2 = DeepSeek-V4-Flash in its NATIVE published precision (FP8-block e4m3 + FP4-expert; no bf16 variant exists) under the amended native-precision rule; native vLLM tokenizer_mode=deepseek_v4 invocation, thinking=False; arch-mandated kv_cache_dtype=fp8; Qwen3.6-27B excluded on servability (4-launch GDN-kernel evidence). All other pipeline fields byte-frozen from leg 1. See experiments/preregistration/R046_m0_reentry2_pipeline_escalation.md \u00a77",
+ "chat_template_kwargs": {
+  "thinking": false
+ },
+ "serving_config": {
+  "tokenizer_mode": "deepseek_v4",
+  "kv_cache_dtype": "fp8",
+  "trust_remote_code": true,
+  "max_num_seqs": 256,
+  "enforce_eager": false,
+  "disable_custom_all_reduce": false
+ },
+ "model_dir_provenance": {
+  "model.safetensors.index.json": "7e975ba3bef8947a94e7da0abd60888375b232b4dfad883d59653e65c6ba522a",
+  "tokenizer.json": "8f9f37ca37fdc4f5fd36d5cf4d3b0e8392edb4e894fd10cc0d70b4957c8633cf",
+  "tokenizer_config.json": "6ac8c8dc065ed118161d02dd532749ae3f52c243deac27872134fae2f50d8547",
+  "config.json": "52b5a1aa87606cb5be4f3158d706594edb1c4ce97ce6b1cd6079f15df075d7f5",
+  "configuration.json": "a78221ae93dd8977b26fcd1d106fa5ad7e7f1fd3a7d93bfd9d6fba5ed00ec4d2",
+  "generation_config.json": "5fccff80f55a4d455bbe516bdd552edf3e9623df95e99fbf2a3c3389fdf91af0",
+  "encoding/encoding_dsv4.py": "bdbd57c132a1b3725042323d02b98b9d1df28e5f388f134399555d041f5055e0",
+  "encoding/test_encoding_dsv4.py": "c2bc54c4c934f5c64096bd9c555efa7d1ddf179c1eff58f01ceb2dcd60adcf28",
+  "inference/config.json": "6cc6f816ca73a8d38750194e330398e4f6955b4b45f674f7d29c96da14ccb733",
+  "inference/convert.py": "912acfc20bdd9ae4dbd5bde9dc7c8e61f6d27b6826d3ac2d052b2534c0881454",
+  "inference/generate.py": "d4d443c0be8499b20ae5eaff0a623df02f47a8309be6feeba4eb4e0eeb5342c3",
+  "inference/kernel.py": "c4dc859a2208f9182ae00f6267cf8655deba51dcd92dfd14d0e65401658593e4",
+  "inference/model.py": "6380e70f3690227155ae17fa40b99c8e6900623d00925fd8a8ccc9588e02e818"
+ },
+ "resolved_quantization": {
+  "quantization": "deepseek_v4_fp8",
+  "dtype": "torch.bfloat16",
+  "checkpoint_quantization_config": {
+   "activation_scheme": "dynamic",
+   "fmt": "e4m3",
+   "quant_method": "fp8",
+   "scale_fmt": "ue8m0",
+   "weight_block_size": [
+    128,
+    128
+   ]
+  }
+ },
+ "env_robustness": {
+  "NCCL_P2P_DISABLE": "1",
+  "VLLM_USE_FLASHINFER_SAMPLER": "0",
+  "CUDA_HOME": "/usr/local/cuda-13.0",
+  "HF_HUB_OFFLINE": "1"
+ },
+ "argv": [
+  "<ARTIFACT_ROOT>/experiments/real/cache_pipeline.py",
+  "--tp",
+  "4",
+  "--model",
+  "<MODEL_DIR>/DeepSeek-V4-Flash",
+  "--tokenizer-mode",
+  "deepseek_v4",
+  "--kv-cache-dtype",
+  "fp8",
+  "--trust-remote-code",
+  "--no-think",
+  "--think-kwarg",
+  "thinking",
+  "--max-num-seqs",
+  "256",
+  "--deviation",
+  "R046-A2 (codex-ratified GO, thread 019eb76d): leg-2 = DeepSeek-V4-Flash in its NATIVE published precision (FP8-block e4m3 + FP4-expert; no bf16 variant exists) under the amended native-precision rule; native vLLM tokenizer_mode=deepseek_v4 invocation, thinking=False; arch-mandated kv_cache_dtype=fp8; Qwen3.6-27B excluded on servability (4-launch GDN-kernel evidence). All other pipeline fields byte-frozen from leg 1. See experiments/preregistration/R046_m0_reentry2_pipeline_escalation.md \u00a77"
+ ],
+ "cuda_visible_devices": "0,1,2,3",
+ "split_qids_sha256": "8147d2c509ab134fdb913041fbdb367d690b047eba08e703a8af50989a325985",
+ "determinism_check_100": true,
+ "determinism_summary": {
+  "answer_agreement": 0.95,
+  "score_drift_median": 0.002940172585376948,
+  "score_drift_max": 0.15391269700128823
+ },
+ "determinism_amendment": "bit-identical criterion unrealizable under vLLM batching; amended gate: answer agreement >= 0.90 on the 100-item slice, drift quantiles recorded. Frozen-pipeline identity = sha256-pinned cache files (R002 deviation note)."
+}

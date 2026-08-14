@@ -1,0 +1,13 @@
+# Real-LLM caching step ONLY (Path B in REPRODUCE.md §2): regenerating the full
+# JSONL cache from model weights. NOT needed to regenerate the frontier maps from
+# the shipped frozen arrays (Path A is CPU-only and uses requirements.txt).
+#
+# GPU + CUDA toolchain required. Tested on 8×H100, CUDA 13.0, Python 3.12.0.
+# Install requirements.txt first, then this file.
+vllm==0.22.1
+torch==2.11.0+cu130            # install via the CUDA-matched index; see vLLM docs for your CUDA
+transformers==4.57.1
+datasets==4.0.0
+# DeepSeek-V4-Flash serving env (set as shell env vars, not pip):
+#   CUDA_HOME=/usr/local/cuda-13.0  NCCL_P2P_DISABLE=1
+#   VLLM_USE_FLASHINFER_SAMPLER=0   HF_HUB_OFFLINE=1

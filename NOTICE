@@ -1,0 +1,11 @@
+Certify or Refuse — Floor Certification under Covariate Shift (reproduction artifact)
+Copyright 2026 Jiamiao Liu, Dewen Qiao, Yu Zhang, and Xuetao Chen.
+
+This product includes software developed by the authors.
+
+This artifact is licensed under the Apache License, Version 2.0 (see LICENSE).
+
+Third-party data and models reproduced or referenced by this artifact remain
+under their own licenses and are NOT relicensed here (see LICENSE-NOTE.md and
+data/README_DATA.md): SQuAD (CC BY-SA 4.0), NewsQA (Microsoft Research license),
+Meta Llama 3 (Llama 3 Community License), DeepSeek-V4-Flash (DeepSeek model license).

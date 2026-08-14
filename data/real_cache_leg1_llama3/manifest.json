@@ -1,0 +1,122 @@
+{
+ "model": "<MODEL_DIR>/Meta-Llama-3-8B-Instruct",
+ "prompt_sha256": "04310a8da18b3798b957b1c9acc9580e84b17ff8c7074dfa0212baf08c548f3b",
+ "max_new_tokens": 64,
+ "ctx_clip": 6000,
+ "temperature": 0.0,
+ "target": "newsqa",
+ "counts": {
+  "squad_train": 86588,
+  "newsqa_train": 74160,
+  "squad_dev": 10507,
+  "newsqa_dev": 4212
+ },
+ "pools": {
+  "src_lock": {
+   "n": 8000,
+   "path": "<ARTIFACT_ROOT>/experiments/real/cache/src_lock.jsonl",
+   "sha256": "f49531fd4a8fb566474745bc0b0fa2dc7bd25a9cdf171c342d53884e015fa1d8",
+   "qids_sha256": "4029b277c80dea3b0c5bb1f52ad473e4df00d2e108035ebc530329268619ceab",
+   "score_summary": {
+    "mean": -0.09169656360450641,
+    "std": 0.0985619686429852,
+    "min": -1.0325356721878052,
+    "max": -7.212108556586827e-06
+   }
+  },
+  "src_wP": {
+   "n": 16000,
+   "path": "<ARTIFACT_ROOT>/experiments/real/cache/src_wP.jsonl",
+   "sha256": "0074ac1a917a10cb193b2703635d82990b6ff4fb0ad5b2e86086bc3ea6a31a0b",
+   "qids_sha256": "9110bb65603ba882d8d078d1eab777de7e823229412f1e85681ade511c06b93e",
+   "score_summary": {
+    "mean": -0.09467943803672725,
+    "std": 0.1034558200629903,
+    "min": -1.2378565669059753,
+    "max": -8.225390047300607e-06
+   }
+  },
+  "src_r": {
+   "n": 16000,
+   "path": "<ARTIFACT_ROOT>/experiments/real/cache/src_r.jsonl",
+   "sha256": "c4d28dd3019e8bd2d3a2038f043ad872d22f413853cfe0db82d3f4a43d199976",
+   "qids_sha256": "9505e0b391f3fc8141d7740d48f478c73285fe64826bf7b703bbbb2dee2aefeb",
+   "score_summary": {
+    "mean": -0.0939084636479348,
+    "std": 0.10274111616894879,
+    "min": -1.362013578414917,
+    "max": -5.269010033259747e-06
+   }
+  },
+  "src_unlabeled_ladder": {
+   "n": 20000,
+   "path": "<ARTIFACT_ROOT>/experiments/real/cache/src_unlabeled_ladder.jsonl",
+   "sha256": "2c74f8e14336620224235406195190ba00c14713dcbbb45b0e5f40da0a0cba52",
+   "qids_sha256": "c54d6eb19d57dfac07762b1c52621ef466d236f3ed29fdb42b14e9a8dc6ecc5b",
+   "score_summary": {
+    "mean": -0.09359812835144234,
+    "std": 0.1025808483977352,
+    "min": -1.3503091037273407,
+    "max": -2.908699650561175e-06
+   }
+  },
+  "tgt_unlabeled": {
+   "n": 40000,
+   "path": "<ARTIFACT_ROOT>/experiments/real/cache/tgt_unlabeled.jsonl",
+   "sha256": "4f424ee8d6cfc732c03160d3aa1deed9c824d109a7aa140f8c4f983bd4700342",
+   "qids_sha256": "d0d6d0c7881dc1255db2429b572d93389d60c04e5c63a63b544c803bbe5ae33a",
+   "score_summary": {
+    "mean": -0.11904450965012295,
+    "std": 0.12130136816606871,
+    "min": -1.3248206973075867,
+    "max": -1.7795731406319453e-05
+   }
+  },
+  "eval_target": {
+   "n": 4212,
+   "path": "<ARTIFACT_ROOT>/experiments/real/cache/eval_target.jsonl",
+   "sha256": "68c65ce9060b6f579f8d3b2f7a4932fc647fb1a4e82415a737061ab21fb4a617",
+   "qids_sha256": "3de53f343f18dfcb6a7ba950b8009d7b95e681108b33f2251ef59ce0fc38a9a4",
+   "score_summary": {
+    "mean": -0.12195704070372418,
+    "std": 0.12318652953811993,
+    "min": -1.2598120868206024,
+    "max": -0.00015189663179171475
+   }
+  },
+  "eval_source": {
+   "n": 10507,
+   "path": "<ARTIFACT_ROOT>/experiments/real/cache/eval_source.jsonl",
+   "sha256": "6c60333f2ac78722ac29d4bbd84acde8be74b1a9757bcd37054b17cb28af4ce8",
+   "qids_sha256": "de253ba97bcd0a03d719072ba36080a048e1df9e7512be411ad3d7dd6182e621",
+   "score_summary": {
+    "mean": -0.0951068670098089,
+    "std": 0.09911700252868204,
+    "min": -1.060187190771103,
+    "max": -6.159117826124809e-06
+   }
+  }
+ },
+ "seed": 20260611,
+ "max_items": 0,
+ "tp": 4,
+ "dtype": "bfloat16",
+ "max_model_len": 8192,
+ "vllm_version": "0.22.1",
+ "model_snapshot": "<MODEL_DIR>/Meta-Llama-3-8B-Instruct | config:61f3de03a16ca8046b05dc777bce72717022bc8522152eee61a69072272ef54b | index:146776fce3f6db1103aa6f249e65ee5544c5923ce6f971b092eee79aa6e5d37b",
+ "model_deviation": "registered primary Qwen/Qwen2.5-7B-Instruct unavailable (weights absent locally; proxy network unusable, ~0 B/s measured); registered fallback Llama-3.1-8B-Instruct also absent; same-class local member Meta-Llama-3-8B-Instruct used. Trigger = availability ONLY (R002: never output quality). Documented protocol deviation.",
+ "argv": [
+  "<ARTIFACT_ROOT>/experiments/real/cache_pipeline.py",
+  "--tp",
+  "4"
+ ],
+ "cuda_visible_devices": "0,1,2,3",
+ "split_qids_sha256": "8147d2c509ab134fdb913041fbdb367d690b047eba08e703a8af50989a325985",
+ "determinism_check_100": true,
+ "determinism_summary": {
+  "answer_agreement": 0.99,
+  "score_drift_median": 0.0009671312698996733,
+  "score_drift_max": 0.08574241158126483
+ },
+ "determinism_amendment": "bit-identical criterion unrealizable under vLLM batching; amended gate: answer agreement >= 0.90 on the 100-item slice, drift quantiles recorded. Frozen-pipeline identity = sha256-pinned cache files (R002 deviation note)."
+}
